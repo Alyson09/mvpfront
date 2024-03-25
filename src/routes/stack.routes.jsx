@@ -18,6 +18,9 @@ export default function StackRoutes() {
             <Stack.Screen
                 name="VacancyDetailScreen"
                 component={VacancyDetailScreen}
+                options={{
+                    title: 'Vaga'
+                }}
             />
             <Stack.Screen
                 name="CompanyDetailScreen"

@@ -1,17 +1,26 @@
 import { View, Image, Text, StyleSheet, Pressable } from 'react-native'
 import { COMPANIES } from '../data/mock-data'
+import { useNavigation } from '@react-navigation/native'
+import { useEffect } from 'react'
 
 export const CardVacancy = ({ infoVancancies }) => {
 
-    const company = COMPANIES.find((company) => company.id === infoVancancies.id_company)
+    const navigation = useNavigation()
+
+    const company  = COMPANIES.find((company) => company.id === infoVancancies.id_company)
+
+    const goToDetailPage = () => {
+        navigation.navigate('VacancyDetailScreen', {
+            infoVancancy: infoVancancies,
+            infoCompany: company
+        })
+    }
 
     return(
-
-        
         <Pressable 
             style={styles.mainContainer}
             android_ripple={{ color: '#00000088"' }}
-            //TODO
+            onPress={goToDetailPage}
         >
             <View style={styles.imageContainer}>
                 <Image 
@@ -51,7 +60,7 @@ const styles = StyleSheet.create({
         borderBottomRightRadius: 4
     },
     image: {
-        height: 150,
+        height: 146,
         width: 400
     },
     textTitle: {
