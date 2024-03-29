@@ -25,6 +25,9 @@ export default function StackRoutes() {
             <Stack.Screen
                 name="CompanyDetailScreen"
                 component={CompanyDetailScreen}
+                options={{
+                    title: 'Detalhes da Empresa'
+                }}
             />
         </Stack.Navigator>
     )

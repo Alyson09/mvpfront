@@ -1,7 +1,6 @@
 import { View, Image, Text, StyleSheet, Pressable } from 'react-native'
 import { COMPANIES } from '../data/mock-data'
 import { useNavigation } from '@react-navigation/native'
-import { useEffect } from 'react'
 
 export const CardVacancy = ({ infoVancancies }) => {
 
@@ -40,9 +39,7 @@ const styles = StyleSheet.create({
     mainContainer: {
         justifyContent: 'center',
         backgroundColor: '#d8d8d8',
-        overflow: 'hidden',
-        paddingVertical: 15,
-        paddingHorizontal: 15,
+        padding: 15,
         margin: 14,
         borderTopLeftRadius: 6,
         borderTopRightRadius: 6,
@@ -50,7 +47,6 @@ const styles = StyleSheet.create({
         borderBottomRightRadius: 6
     },
     imageContainer: {
-        flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         overflow: 'hidden',
