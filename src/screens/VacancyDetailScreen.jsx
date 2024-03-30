@@ -13,12 +13,20 @@ export const VacancyDetailScreen = ({ route }) => {
                 <View style={styles.bannerVancancyContainer}>
                     <Image
                         source={{ uri: detailInfoVancancy.banner }}
-                        style={{ height: 146, width: 400 }}
+                        style={styles.image}
                     />
                 </View>
+            <View style={styles.textContainer}>
                 <Text style={styles.textTitle}>{detailInfoVancancy.title}</Text>
             </View>
+            </View>
             <FrameCompany detailInfoCompany={detailInfoCompany}/>
+            <View style={styles.sectionContainer}>
+                <Text style={styles.textTitle}>Descrição da vaga</Text>
+                <View style={styles.sectionTextContainer}>
+                    <Text  style={{ textAlign: 'justify' }}>{detailInfoVancancy.description}</Text>
+                </View>
+            </View>
             <View style={styles.sectionContainer}>
                 <Text style={styles.textTitle}>Requisitos</Text>
                 <View style={styles.sectionTextContainer}>
@@ -27,7 +35,7 @@ export const VacancyDetailScreen = ({ route }) => {
             </View>
             <View style={styles.sectionContainer}>
                 <Text style={styles.textTitle}>Diferenciais</Text>
-                <View style={{ padding: 8 }}>
+                <View style={styles.sectionTextContainer}>
                     <Text style={{ textAlign: 'justify' }}>{detailInfoVancancy.differential}</Text>
                 </View>
             </View>
@@ -37,11 +45,14 @@ export const VacancyDetailScreen = ({ route }) => {
 
 const styles = StyleSheet.create({
     mainContainer: {
-        padding: 15
+        padding: 15,
+        margin: 14,
     },
     headerContainer: {
-        backgroundColor: '#d8d8d8',
-        padding: 16,
+        justifyContent: 'center',
+        backgroundColor: '#ffffff',
+        padding: 15,
+        margin: 14,
         borderTopLeftRadius: 6,
         borderTopRightRadius: 6,
         borderBottomLeftRadius: 6,
@@ -56,19 +67,28 @@ const styles = StyleSheet.create({
         borderBottomLeftRadius: 4,
         borderBottomRightRadius: 4
     },
+    image: {
+        height: 200,
+        width: 400,
+    },
     textTitle: {
         fontSize: 20,
         fontWeight: 'bold',
         color: '#4E4E4E',
-        marginTop: 10 
+        marginTop: 10,
     },
     sectionContainer: {
-        backgroundColor: '#d8d8d8',
+        backgroundColor: '#ffffff',
+        alignItems: 'center',
         paddingHorizontal: 14,
+        paddingVertical: 14,
         borderTopLeftRadius: 6,
         borderTopRightRadius: 6,
         borderBottomLeftRadius: 6,
         borderBottomRightRadius: 6,
-        marginBottom: 30
+        marginBottom: 10,
+    },
+    textContainer: {
+        alignItems: 'center'
     }
 })
