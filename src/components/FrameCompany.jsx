@@ -37,12 +37,14 @@ const styles = StyleSheet.create({
     infoCopanyContainer: {
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'space-between',
+        marginLeft: 20,
         marginBottom: 20,
         marginTop: 20
     },
     bannerAndTextContainer: {
         alignItems: 'center',
+        flexDirection: 'row'
     },
     bannerCompanyContainer: {
         overflow: 'hidden',
@@ -54,6 +56,7 @@ const styles = StyleSheet.create({
     },
     textContainer: {
         alignItems: 'center',
+        marginLeft: 15
     },
     textSubtitle: {
         fontWeight: 'bold', 
@@ -61,8 +64,8 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     image: {
-        height: 100,
-        width: 100,
+        height: 70,
+        width: 70,
     }
 });
 

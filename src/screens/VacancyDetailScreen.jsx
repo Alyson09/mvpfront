@@ -45,14 +45,13 @@ export const VacancyDetailScreen = ({ route }) => {
 
 const styles = StyleSheet.create({
     mainContainer: {
-        padding: 15,
-        margin: 14,
+        padding: 5,
+        margin: 5 
     },
     headerContainer: {
         justifyContent: 'center',
         backgroundColor: '#ffffff',
-        padding: 15,
-        margin: 14,
+        padding: 10,
         borderTopLeftRadius: 6,
         borderTopRightRadius: 6,
         borderBottomLeftRadius: 6,
