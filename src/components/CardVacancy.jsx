@@ -18,7 +18,7 @@ export const CardVacancy = ({ infoVancancies }) => {
     return(
         <Pressable 
             style={styles.mainContainer}
-            android_ripple={{ color: '#00000088"' }}
+            android_ripple={{ color: '#00000088' }}
             onPress={goToDetailPage}
         >
             <View style={styles.imageContainer}>
@@ -38,7 +38,7 @@ export const CardVacancy = ({ infoVancancies }) => {
 const styles = StyleSheet.create({
     mainContainer: {
         justifyContent: 'center',
-        backgroundColor: '#d8d8d8',
+        backgroundColor: '#ffffff',
         padding: 15,
         margin: 14,
         borderTopLeftRadius: 6,
@@ -56,19 +56,20 @@ const styles = StyleSheet.create({
         borderBottomRightRadius: 4
     },
     image: {
-        height: 146,
-        width: 400
+        height: 200,
+        width: 400,
     },
     textTitle: {
         fontSize: 20,
         fontWeight: 'bold',
-        color: '#4E4E4E'
+        color: '#4E4E4E',
     },
     textSubtitle: {
         fontWeight: 'bold', 
         color: '#797979'
     },
     textContainer: {
-        marginTop: 10
+        marginTop: 10,
+        alignItems: 'center'
     }
 })

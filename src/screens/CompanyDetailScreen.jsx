@@ -29,7 +29,8 @@ const styles = StyleSheet.create({
         marginTop: 10 
     },
     sectionContainer: {
-        backgroundColor: '#d8d8d8',
+        backgroundColor: '#ffffff',
+        alignItems: 'center',
         paddingHorizontal: 14,
         borderTopLeftRadius: 6,
         borderTopRightRadius: 6,

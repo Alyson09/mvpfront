@@ -3,6 +3,7 @@ class Vacancy {
         id,
         title,
         id_company,
+        description,
         requirements,
         differential,
         banner
@@ -10,6 +11,7 @@ class Vacancy {
         this.id = id,
         this.title = title,
         this.id_company = id_company,
+        this.description = description,
         this.requirements = requirements,
         this.differential = differential,
         this.banner = banner
