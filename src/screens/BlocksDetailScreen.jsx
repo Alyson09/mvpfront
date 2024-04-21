@@ -1,43 +1,22 @@
 import { View, Text, ScrollView, Image, StyleSheet } from 'react-native'
-import { FrameCompany } from '../components/FrameCompany'
 
 
-export const VacancyDetailScreen = ({ route }) => {
+export const BlocksDetailScreen = ({ route }) => {
 
-    const detailInfoVancancy = route.params.infoVancancy
-    const detailInfoCompany = route.params.infoCompany
+    const detailInfoBlocks = route.params.infoBlocks
 
     return (
         <ScrollView style={styles.mainContainer}>
             <View style={styles.headerContainer}>
-                <View style={styles.bannerVancancyContainer}>
+                <View style={styles.bannerBlockContainer}>
                     <Image
-                        source={{ uri: detailInfoVancancy.banner }}
+                        source={{ uri: detailInfoBlocks.banner }}
                         style={styles.image}
                     />
                 </View>
             <View style={styles.textContainer}>
-                <Text style={styles.textTitle}>{detailInfoVancancy.title}</Text>
+                <Text style={styles.textTitle}>{detailInfoBlocks.title}</Text>
             </View>
-            </View>
-            <FrameCompany detailInfoCompany={detailInfoCompany}/>
-            <View style={styles.sectionContainer}>
-                <Text style={styles.textTitle}>Descrição da vaga</Text>
-                <View style={styles.sectionTextContainer}>
-                    <Text  style={{ textAlign: 'justify' }}>{detailInfoVancancy.description}</Text>
-                </View>
-            </View>
-            <View style={styles.sectionContainer}>
-                <Text style={styles.textTitle}>Requisitos</Text>
-                <View style={styles.sectionTextContainer}>
-                    <Text  style={{ textAlign: 'justify' }}>{detailInfoVancancy.requirements}</Text>
-                </View>
-            </View>
-            <View style={styles.sectionContainer}>
-                <Text style={styles.textTitle}>Diferenciais</Text>
-                <View style={styles.sectionTextContainer}>
-                    <Text style={{ textAlign: 'justify' }}>{detailInfoVancancy.differential}</Text>
-                </View>
             </View>
         </ScrollView>
     )
@@ -57,7 +36,7 @@ const styles = StyleSheet.create({
         borderBottomLeftRadius: 6,
         borderBottomRightRadius: 6
     },
-    bannerVancancyContainer: {
+    bannerBlockContainer: {
         justifyContent: 'center',
         alignItems: 'center',
         overflow: 'hidden',

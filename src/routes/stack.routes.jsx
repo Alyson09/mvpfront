@@ -1,7 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { VacancyListScreen } from '../screens/VacancyListScreen'
-import { VacancyDetailScreen } from '../screens/VacancyDetailScreen'
-import { CompanyDetailScreen } from '../screens/CompanyDetailScreen'
+import { BlockListScreen } from '../screens/BlockListScreen'
+import { BlocksDetailScreen } from '../screens/BlocksDetailScreen'
 
 const Stack = createNativeStackNavigator()
 
@@ -9,24 +8,17 @@ export default function StackRoutes() {
     return(
         <Stack.Navigator>
             <Stack.Screen
-                name="VacancyListScreen"
-                component={VacancyListScreen}
+                name="BlockListScreen"
+                component={BlockListScreen}
                 options={{
-                    title: 'Feed'
+                    title: 'Lista de Quadras'
                 }}
             />
             <Stack.Screen
-                name="VacancyDetailScreen"
-                component={VacancyDetailScreen}
+                name="BlocksDetailScreen"
+                component={BlocksDetailScreen}
                 options={{
-                    title: 'Vaga'
-                }}
-            />
-            <Stack.Screen
-                name="CompanyDetailScreen"
-                component={CompanyDetailScreen}
-                options={{
-                    title: 'Detalhes da Empresa'
+                    title: 'Quadra'
                 }}
             />
         </Stack.Navigator>

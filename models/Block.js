@@ -1,13 +1,13 @@
-class Company {
+class Block {
     constructor(
         id,
-        name,
+        title,
         banner
     ){
         this.id = id,
-        this.name = name,
+        this.title = title,
         this.banner = banner
     }
 }
 
-export default Company
+export default Block

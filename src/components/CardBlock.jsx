@@ -2,16 +2,14 @@ import { View, Image, Text, StyleSheet, Pressable } from 'react-native'
 import { COMPANIES } from '../data/mock-data'
 import { useNavigation } from '@react-navigation/native'
 
-export const CardVacancy = ({ infoVancancies }) => {
+export const CardBlock = ({ infoBlocks }) => {
 
     const navigation = useNavigation()
 
-    const company  = COMPANIES.find((company) => company.id === infoVancancies.id_company)
 
     const goToDetailPage = () => {
-        navigation.navigate('VacancyDetailScreen', {
-            infoVancancy: infoVancancies,
-            infoCompany: company
+        navigation.navigate('BlocksDetailScreen', {
+            infoBlocks: infoBlocks,
         })
     }
 
@@ -23,13 +21,12 @@ export const CardVacancy = ({ infoVancancies }) => {
         >
             <View style={styles.imageContainer}>
                 <Image 
-                    source={{ uri: infoVancancies.banner }}
+                    source={{ uri: infoBlocks.banner }}
                     style={styles.image}
                 />
             </View>
             <View style={styles.textContainer}>
-                <Text style={styles.textTitle}>{infoVancancies.title}</Text>
-                <Text style={styles.textSubtitle}>{company.name}</Text>
+                <Text style={styles.textTitle}>{infoBlocks.title}</Text>
             </View>
         </Pressable>
     )
@@ -59,17 +56,18 @@ const styles = StyleSheet.create({
         height: 200,
         width: 400,
     },
+    //texto nome da arena
     textTitle: {
         fontSize: 20,
         fontWeight: 'bold',
         color: '#4E4E4E',
     },
+    //texto de nome da empresa
     textSubtitle: {
         fontWeight: 'bold', 
-        color: '#797979'
+        color: '#49494949'
     },
     textContainer: {
-        marginTop: 10,
-        alignItems: 'center'
+        marginTop: 10,    
     }
 })
